@@ -39,7 +39,7 @@ namespace DiceRoller.UI
             DiceExpressionParserDetailed diceParser = new DiceExpressionParserDetailed(new StandardDiceRoller());
             IComponent diceExpression = diceParser.ParseString(e.Parameter as string);
 
-            target.Content = $"Rolling {diceExpression.ToString()} for a result of {diceExpression.Calculate()}";
+            target.Content = $"Rolled {diceExpression.ToString()} for a result of {diceExpression.Calculate()}";
         }
 
         private void CanExecuteRollCommand(object sender, CanExecuteRoutedEventArgs e)
