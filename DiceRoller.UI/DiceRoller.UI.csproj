@@ -96,8 +96,8 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Dice\Dice.csproj">
-      <Project>{53848598-E521-45F4-A3D5-FBFA812394E2}</Project>
+    <ProjectReference Include="..\Dice\Dice\Dice.csproj">
+      <Project>{53848598-e521-45f4-a3d5-fbfa812394e2}</Project>
       <Name>Dice</Name>
     </ProjectReference>
   </ItemGroup>
