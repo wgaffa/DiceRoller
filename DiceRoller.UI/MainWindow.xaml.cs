@@ -1,4 +1,7 @@
-﻿using System;
+﻿using DMTools.Die.Algorithm;
+using DMTools.Die.Parser;
+using DMTools.Die.Rollers;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -20,16 +23,30 @@ namespace DiceRoller.UI
     /// </summary>
     public partial class MainWindow : Window
     {
-        public static RollCommand RollCommand = new RollCommand();
+        public static RoutedCommand RollCommand = new RoutedCommand();
 
         public MainWindow()
         {
             InitializeComponent();
         }
 
-        private void CommandBinding_Executed(object sender, ExecutedRoutedEventArgs e)
+        private void ExecutedRollCommand(object sender, ExecutedRoutedEventArgs e)
         {
+            Label target = e.Source as Label;
 
+            if (target == null) return;
+
+            DiceExpressionParserDetailed diceParser = new DiceExpressionParserDetailed(new StandardDiceRoller());
+            IComponent diceExpression = diceParser.ParseString(e.Parameter as string);
+
+            target.Content = $"Rolling {diceExpression.ToString()} for a result of {diceExpression.Calculate()}";
+        }
+
+        private void CanExecuteRollCommand(object sender, CanExecuteRoutedEventArgs e)
+        {
+            Label target = e.Source as Label;
+
+            e.CanExecute = target == null ? false : true;
         }
     }
 }
