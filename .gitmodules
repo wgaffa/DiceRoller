@@ -1,0 +1,4 @@
+[submodule "Dice"]
+	path = Dice
+	url = https://github.com/wgaffa/DMToolkit.Dice.git
+	branch = develop
