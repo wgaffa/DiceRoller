@@ -1,6 +1,7 @@
 ﻿using DMTools.Die.Algorithm;
 using DMTools.Die.Parser;
 using DMTools.Die.Rollers;
+using Superpower;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -37,8 +38,17 @@ namespace DiceRoller.UI
             if (target == null) return;
 
             DiceExpressionParserDetailed diceParser = new DiceExpressionParserDetailed(new StandardDiceRoller());
-            IComponent diceExpression = diceParser.ParseString(e.Parameter as string);
 
+            IComponent diceExpression = new Constant(0);
+            try
+            {
+                diceExpression = diceParser.ParseString(e.Parameter as string);
+            }
+            catch (ParseException)
+            {
+                MessageBox.Show("Could not parse the expression, please check your expression and try again", "Expression failure", MessageBoxButton.OK, MessageBoxImage.Error);
+            }
+            
             target.Text = $"Rolled {diceExpression.ToString()} for a result of {diceExpression.Calculate()}";
         }
 
