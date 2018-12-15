@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:DiceRoller.UI"
         mc:Ignorable="d"
-        Title="Dice Roller" ResizeMode="CanMinimize" Height="332.131" Width="634.633">
+        Title="Dice Roller" Height="315" Width="640" MinWidth="640" MinHeight="315">
     <Window.CommandBindings>
         <CommandBinding Command="{x:Static local:MainWindow.RollCommand}"
                         CanExecute="CanExecuteRollCommand"
@@ -19,7 +19,7 @@
         <Grid.ColumnDefinitions>
             <ColumnDefinition/>
         </Grid.ColumnDefinitions>
-        <TabControl Margin="10" VerticalAlignment="Top" Height="180" Width="600">
+        <TabControl Margin="10" VerticalAlignment="Top" Height="180" Width="600" HorizontalAlignment="Left">
             <TabItem x:Name="quickRollTab" Header="Quick Roll">
                 <Grid Background="#FFE5E5E5">
                     <Grid.RowDefinitions>
