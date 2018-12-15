@@ -97,7 +97,7 @@
                 </Grid>
             </TabItem>
         </TabControl>
-        <TextBlock x:Name="rollResultTextBlock" TextWrapping="WrapWithOverflow" Text="Result will be shown here" Grid.Row="1" Margin="10" HorizontalAlignment="Center" VerticalAlignment="Center" FontFamily="Kristen ITC" FontSize="22" FontWeight="Bold"/>
+        <TextBlock x:Name="rollResultTextBlock" TextWrapping="WrapWithOverflow" Text="Result will be shown here" Grid.Row="1" Margin="10" HorizontalAlignment="Center" VerticalAlignment="Center" FontFamily="Times New Roman" FontSize="22" FontWeight="Bold"/>
 
     </Grid>
 </Window>
