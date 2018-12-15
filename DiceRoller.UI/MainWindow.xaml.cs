@@ -39,7 +39,7 @@ namespace DiceRoller.UI
 
             DiceExpressionParserDetailed diceParser = new DiceExpressionParserDetailed(new StandardDiceRoller());
 
-            IComponent diceExpression = new Constant(0);
+            IDiceExpression diceExpression = new Constant(0);
             try
             {
                 diceExpression = diceParser.ParseString(e.Parameter as string);
