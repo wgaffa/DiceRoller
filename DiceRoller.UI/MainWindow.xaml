@@ -19,7 +19,7 @@
         <Grid.ColumnDefinitions>
             <ColumnDefinition/>
         </Grid.ColumnDefinitions>
-        <TabControl Margin="10" VerticalAlignment="Top">
+        <TabControl Margin="10" VerticalAlignment="Top" Height="180" Width="600">
             <TabItem x:Name="quickRollTab" Header="Quick Roll">
                 <Grid Background="#FFE5E5E5">
                     <Grid.RowDefinitions>
@@ -35,54 +35,54 @@
                         <ColumnDefinition/>
                         <ColumnDefinition/>
                     </Grid.ColumnDefinitions>
-                    <Button Command="{x:Static local:MainWindow.RollCommand}" CommandParameter="d2" Content="d2" Width="75" Margin="5" CommandTarget="{Binding ElementName=RollResultLabel}"/>
-                    <Button Content="d4" Width="75" Command="{x:Static local:MainWindow.RollCommand}" CommandParameter="d4" Grid.Column="1" Margin="5" CommandTarget="{Binding ElementName=RollResultLabel}"/>
-                    <Button Content="d6" Width="75" Command="{x:Static local:MainWindow.RollCommand}" CommandParameter="d6" Grid.Column="2" Margin="5" CommandTarget="{Binding ElementName=RollResultLabel}"/>
-                    <Button Content="d10" Width="75" Command="{x:Static local:MainWindow.RollCommand}" CommandParameter="d10" Grid.Column="3" Margin="5" CommandTarget="{Binding ElementName=RollResultLabel}"/>
-                    <Button Content="d12" Width="75" Command="{x:Static local:MainWindow.RollCommand}" CommandParameter="d12" Grid.Column="4" Margin="5" CommandTarget="{Binding ElementName=RollResultLabel}"/>
-                    <Button Content="d20" Width="75" Command="{x:Static local:MainWindow.RollCommand}" CommandParameter="d20" Grid.Column="5" Margin="5" CommandTarget="{Binding ElementName=RollResultLabel}"/>
-                    <Button Content="d100" Width="75" Command="{x:Static local:MainWindow.RollCommand}" CommandParameter="d100" Grid.Column="6" Margin="5" CommandTarget="{Binding ElementName=RollResultLabel}"/>
+                    <Button Command="{x:Static local:MainWindow.RollCommand}" CommandParameter="d2" Content="d2" Width="75" Margin="5" CommandTarget="{Binding ElementName=rollResultTextBlock}"/>
+                    <Button Content="d4" Width="75" Command="{x:Static local:MainWindow.RollCommand}" CommandParameter="d4" Grid.Column="1" Margin="5" CommandTarget="{Binding ElementName=rollResultTextBlock}"/>
+                    <Button Content="d6" Width="75" Command="{x:Static local:MainWindow.RollCommand}" CommandParameter="d6" Grid.Column="2" Margin="5" CommandTarget="{Binding ElementName=rollResultTextBlock}"/>
+                    <Button Content="d10" Width="75" Command="{x:Static local:MainWindow.RollCommand}" CommandParameter="d10" Grid.Column="3" Margin="5" CommandTarget="{Binding ElementName=rollResultTextBlock}"/>
+                    <Button Content="d12" Width="75" Command="{x:Static local:MainWindow.RollCommand}" CommandParameter="d12" Grid.Column="4" Margin="5" CommandTarget="{Binding ElementName=rollResultTextBlock}"/>
+                    <Button Content="d20" Width="75" Command="{x:Static local:MainWindow.RollCommand}" CommandParameter="d20" Grid.Column="5" Margin="5" CommandTarget="{Binding ElementName=rollResultTextBlock}"/>
+                    <Button Content="d100" Width="75" Command="{x:Static local:MainWindow.RollCommand}" CommandParameter="d100" Grid.Column="6" Margin="5" CommandTarget="{Binding ElementName=rollResultTextBlock}"/>
                     <StackPanel HorizontalAlignment="Left" Margin="0" VerticalAlignment="Top" Grid.Row="1">
-                        <Button Content="2" Width="75" Margin="5" Command="{x:Static local:MainWindow.RollCommand}" CommandParameter="2d2" CommandTarget="{Binding ElementName=RollResultLabel}"/>
-                        <Button Content="3" Width="75" Margin="5" Command="{x:Static local:MainWindow.RollCommand}" CommandParameter="3d2" CommandTarget="{Binding ElementName=RollResultLabel}"/>
-                        <Button Content="4" Width="75" Margin="5" Command="{x:Static local:MainWindow.RollCommand}" CommandParameter="4d2" CommandTarget="{Binding ElementName=RollResultLabel}"/>
-                        <Button Content="5" Width="75" Margin="5" Command="{x:Static local:MainWindow.RollCommand}" CommandParameter="5d2" CommandTarget="{Binding ElementName=RollResultLabel}"/>
+                        <Button Content="2" Width="75" Margin="5" Command="{x:Static local:MainWindow.RollCommand}" CommandParameter="2d2" CommandTarget="{Binding ElementName=rollResultTextBlock}"/>
+                        <Button Content="3" Width="75" Margin="5" Command="{x:Static local:MainWindow.RollCommand}" CommandParameter="3d2" CommandTarget="{Binding ElementName=rollResultTextBlock}"/>
+                        <Button Content="4" Width="75" Margin="5" Command="{x:Static local:MainWindow.RollCommand}" CommandParameter="4d2" CommandTarget="{Binding ElementName=rollResultTextBlock}"/>
+                        <Button Content="5" Width="75" Margin="5" Command="{x:Static local:MainWindow.RollCommand}" CommandParameter="5d2" CommandTarget="{Binding ElementName=rollResultTextBlock}"/>
                     </StackPanel>
                     <StackPanel HorizontalAlignment="Left" Margin="0" VerticalAlignment="Top" Grid.Row="1" Grid.Column="1">
-                        <Button Content="2" Width="75" Margin="5" Command="{x:Static local:MainWindow.RollCommand}" CommandParameter="2d4" CommandTarget="{Binding ElementName=RollResultLabel}"/>
-                        <Button Content="3" Width="75" Margin="5" Command="{x:Static local:MainWindow.RollCommand}" CommandParameter="3d4" CommandTarget="{Binding ElementName=RollResultLabel}"/>
-                        <Button Content="4" Width="75" Margin="5" Command="{x:Static local:MainWindow.RollCommand}" CommandParameter="4d4" CommandTarget="{Binding ElementName=RollResultLabel}"/>
-                        <Button Content="5" Width="75" Margin="5" Command="{x:Static local:MainWindow.RollCommand}" CommandParameter="5d4" CommandTarget="{Binding ElementName=RollResultLabel}"/>
+                        <Button Content="2" Width="75" Margin="5" Command="{x:Static local:MainWindow.RollCommand}" CommandParameter="2d4" CommandTarget="{Binding ElementName=rollResultTextBlock}"/>
+                        <Button Content="3" Width="75" Margin="5" Command="{x:Static local:MainWindow.RollCommand}" CommandParameter="3d4" CommandTarget="{Binding ElementName=rollResultTextBlock}"/>
+                        <Button Content="4" Width="75" Margin="5" Command="{x:Static local:MainWindow.RollCommand}" CommandParameter="4d4" CommandTarget="{Binding ElementName=rollResultTextBlock}"/>
+                        <Button Content="5" Width="75" Margin="5" Command="{x:Static local:MainWindow.RollCommand}" CommandParameter="5d4" CommandTarget="{Binding ElementName=rollResultTextBlock}"/>
                     </StackPanel>
                     <StackPanel HorizontalAlignment="Left" Margin="0" VerticalAlignment="Top" Grid.Row="1" Grid.Column="2">
-                        <Button Content="2" Width="75" Margin="5" Command="{x:Static local:MainWindow.RollCommand}" CommandParameter="2d6" CommandTarget="{Binding ElementName=RollResultLabel}"/>
-                        <Button Content="3" Width="75" Margin="5" Command="{x:Static local:MainWindow.RollCommand}" CommandParameter="3d6" CommandTarget="{Binding ElementName=RollResultLabel}"/>
-                        <Button Content="4" Width="75" Margin="5" Command="{x:Static local:MainWindow.RollCommand}" CommandParameter="4d6" CommandTarget="{Binding ElementName=RollResultLabel}"/>
-                        <Button Content="5" Width="75" Margin="5" Command="{x:Static local:MainWindow.RollCommand}" CommandParameter="5d6" CommandTarget="{Binding ElementName=RollResultLabel}"/>
+                        <Button Content="2" Width="75" Margin="5" Command="{x:Static local:MainWindow.RollCommand}" CommandParameter="2d6" CommandTarget="{Binding ElementName=rollResultTextBlock}"/>
+                        <Button Content="3" Width="75" Margin="5" Command="{x:Static local:MainWindow.RollCommand}" CommandParameter="3d6" CommandTarget="{Binding ElementName=rollResultTextBlock}"/>
+                        <Button Content="4" Width="75" Margin="5" Command="{x:Static local:MainWindow.RollCommand}" CommandParameter="4d6" CommandTarget="{Binding ElementName=rollResultTextBlock}"/>
+                        <Button Content="5" Width="75" Margin="5" Command="{x:Static local:MainWindow.RollCommand}" CommandParameter="5d6" CommandTarget="{Binding ElementName=rollResultTextBlock}"/>
                     </StackPanel>
                     <StackPanel HorizontalAlignment="Left" Margin="0" VerticalAlignment="Top" Grid.Row="1" Grid.Column="3">
-                        <Button Content="2" Width="75" Margin="5" Command="{x:Static local:MainWindow.RollCommand}" CommandParameter="2d10" CommandTarget="{Binding ElementName=RollResultLabel}"/>
-                        <Button Content="3" Width="75" Margin="5" Command="{x:Static local:MainWindow.RollCommand}" CommandParameter="3d10" CommandTarget="{Binding ElementName=RollResultLabel}"/>
-                        <Button Content="4" Width="75" Margin="5" Command="{x:Static local:MainWindow.RollCommand}" CommandParameter="4d10" CommandTarget="{Binding ElementName=RollResultLabel}"/>
-                        <Button Content="5" Width="75" Margin="5" Command="{x:Static local:MainWindow.RollCommand}" CommandParameter="5d10" CommandTarget="{Binding ElementName=RollResultLabel}"/>
+                        <Button Content="2" Width="75" Margin="5" Command="{x:Static local:MainWindow.RollCommand}" CommandParameter="2d10" CommandTarget="{Binding ElementName=rollResultTextBlock}"/>
+                        <Button Content="3" Width="75" Margin="5" Command="{x:Static local:MainWindow.RollCommand}" CommandParameter="3d10" CommandTarget="{Binding ElementName=rollResultTextBlock}"/>
+                        <Button Content="4" Width="75" Margin="5" Command="{x:Static local:MainWindow.RollCommand}" CommandParameter="4d10" CommandTarget="{Binding ElementName=rollResultTextBlock}"/>
+                        <Button Content="5" Width="75" Margin="5" Command="{x:Static local:MainWindow.RollCommand}" CommandParameter="5d10" CommandTarget="{Binding ElementName=rollResultTextBlock}"/>
                     </StackPanel>
                     <StackPanel HorizontalAlignment="Left" Margin="0" VerticalAlignment="Top" Grid.Row="1" Grid.Column="4">
-                        <Button Content="2" Width="75" Margin="5" Command="{x:Static local:MainWindow.RollCommand}" CommandParameter="2d12" CommandTarget="{Binding ElementName=RollResultLabel}"/>
-                        <Button Content="3" Width="75" Margin="5" Command="{x:Static local:MainWindow.RollCommand}" CommandParameter="3d12" CommandTarget="{Binding ElementName=RollResultLabel}"/>
-                        <Button Content="4" Width="75" Margin="5" Command="{x:Static local:MainWindow.RollCommand}" CommandParameter="4d12" CommandTarget="{Binding ElementName=RollResultLabel}"/>
-                        <Button Content="5" Width="75" Margin="5" Command="{x:Static local:MainWindow.RollCommand}" CommandParameter="5d12" CommandTarget="{Binding ElementName=RollResultLabel}"/>
+                        <Button Content="2" Width="75" Margin="5" Command="{x:Static local:MainWindow.RollCommand}" CommandParameter="2d12" CommandTarget="{Binding ElementName=rollResultTextBlock}"/>
+                        <Button Content="3" Width="75" Margin="5" Command="{x:Static local:MainWindow.RollCommand}" CommandParameter="3d12" CommandTarget="{Binding ElementName=rollResultTextBlock}"/>
+                        <Button Content="4" Width="75" Margin="5" Command="{x:Static local:MainWindow.RollCommand}" CommandParameter="4d12" CommandTarget="{Binding ElementName=rollResultTextBlock}"/>
+                        <Button Content="5" Width="75" Margin="5" Command="{x:Static local:MainWindow.RollCommand}" CommandParameter="5d12" CommandTarget="{Binding ElementName=rollResultTextBlock}"/>
                     </StackPanel>
                     <StackPanel HorizontalAlignment="Left" Margin="0" VerticalAlignment="Top" Grid.Row="1" Grid.Column="5">
-                        <Button Content="2" Width="75" Margin="5" Command="{x:Static local:MainWindow.RollCommand}" CommandParameter="2d20" CommandTarget="{Binding ElementName=RollResultLabel}"/>
-                        <Button Content="3" Width="75" Margin="5" Command="{x:Static local:MainWindow.RollCommand}" CommandParameter="3d20" CommandTarget="{Binding ElementName=RollResultLabel}"/>
-                        <Button Content="4" Width="75" Margin="5" Command="{x:Static local:MainWindow.RollCommand}" CommandParameter="4d20" CommandTarget="{Binding ElementName=RollResultLabel}"/>
-                        <Button Content="5" Width="75" Margin="5" Command="{x:Static local:MainWindow.RollCommand}" CommandParameter="5d20" CommandTarget="{Binding ElementName=RollResultLabel}"/>
+                        <Button Content="2" Width="75" Margin="5" Command="{x:Static local:MainWindow.RollCommand}" CommandParameter="2d20" CommandTarget="{Binding ElementName=rollResultTextBlock}"/>
+                        <Button Content="3" Width="75" Margin="5" Command="{x:Static local:MainWindow.RollCommand}" CommandParameter="3d20" CommandTarget="{Binding ElementName=rollResultTextBlock}"/>
+                        <Button Content="4" Width="75" Margin="5" Command="{x:Static local:MainWindow.RollCommand}" CommandParameter="4d20" CommandTarget="{Binding ElementName=rollResultTextBlock}"/>
+                        <Button Content="5" Width="75" Margin="5" Command="{x:Static local:MainWindow.RollCommand}" CommandParameter="5d20" CommandTarget="{Binding ElementName=rollResultTextBlock}"/>
                     </StackPanel>
                     <StackPanel HorizontalAlignment="Left" Margin="0" VerticalAlignment="Top" Grid.Row="1" Grid.Column="6">
-                        <Button Content="2" Width="75" Margin="5" Command="{x:Static local:MainWindow.RollCommand}" CommandParameter="2d100" CommandTarget="{Binding ElementName=RollResultLabel}"/>
-                        <Button Content="3" Width="75" Margin="5" Command="{x:Static local:MainWindow.RollCommand}" CommandParameter="3d100" CommandTarget="{Binding ElementName=RollResultLabel}"/>
-                        <Button Content="4" Width="75" Margin="5" Command="{x:Static local:MainWindow.RollCommand}" CommandParameter="4d100" CommandTarget="{Binding ElementName=RollResultLabel}"/>
-                        <Button Content="5" Width="75" Margin="5" Command="{x:Static local:MainWindow.RollCommand}" CommandParameter="5d100" CommandTarget="{Binding ElementName=RollResultLabel}"/>
+                        <Button Content="2" Width="75" Margin="5" Command="{x:Static local:MainWindow.RollCommand}" CommandParameter="2d100" CommandTarget="{Binding ElementName=rollResultTextBlock}"/>
+                        <Button Content="3" Width="75" Margin="5" Command="{x:Static local:MainWindow.RollCommand}" CommandParameter="3d100" CommandTarget="{Binding ElementName=rollResultTextBlock}"/>
+                        <Button Content="4" Width="75" Margin="5" Command="{x:Static local:MainWindow.RollCommand}" CommandParameter="4d100" CommandTarget="{Binding ElementName=rollResultTextBlock}"/>
+                        <Button Content="5" Width="75" Margin="5" Command="{x:Static local:MainWindow.RollCommand}" CommandParameter="5d100" CommandTarget="{Binding ElementName=rollResultTextBlock}"/>
                     </StackPanel>
                 </Grid>
             </TabItem>
@@ -90,7 +90,7 @@
                 <Grid Background="#FFE5E5E5"/>
             </TabItem>
         </TabControl>
-        <Label x:Name="RollResultLabel" Content="Output of result" Margin="10" Grid.Row="1" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+        <TextBlock x:Name="rollResultTextBlock" TextWrapping="WrapWithOverflow" Text="Result will be shown here" Grid.Row="1" Margin="10" HorizontalAlignment="Center" VerticalAlignment="Center" FontFamily="Kristen ITC" FontSize="22" FontWeight="Bold"/>
 
     </Grid>
 </Window>

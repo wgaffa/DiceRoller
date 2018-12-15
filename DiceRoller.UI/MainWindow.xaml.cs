@@ -32,19 +32,19 @@ namespace DiceRoller.UI
 
         private void ExecutedRollCommand(object sender, ExecutedRoutedEventArgs e)
         {
-            Label target = e.Source as Label;
+            TextBlock target = e.Source as TextBlock;
 
             if (target == null) return;
 
             DiceExpressionParserDetailed diceParser = new DiceExpressionParserDetailed(new StandardDiceRoller());
             IComponent diceExpression = diceParser.ParseString(e.Parameter as string);
 
-            target.Content = $"Rolled {diceExpression.ToString()} for a result of {diceExpression.Calculate()}";
+            target.Text = $"Rolled {diceExpression.ToString()} for a result of {diceExpression.Calculate()}";
         }
 
         private void CanExecuteRollCommand(object sender, CanExecuteRoutedEventArgs e)
         {
-            Label target = e.Source as Label;
+            TextBlock target = e.Source as TextBlock;
 
             e.CanExecute = target == null ? false : true;
         }
