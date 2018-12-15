@@ -87,7 +87,14 @@
                 </Grid>
             </TabItem>
             <TabItem x:Name="advancedRollTab" Header="Advanced">
-                <Grid Background="#FFE5E5E5"/>
+                <Grid Background="#FFE5E5E5">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                    </Grid.RowDefinitions>
+                    <TextBox x:Name="textBox" Margin="10" TextWrapping="Wrap" Text="2d6 * 1.5" VerticalAlignment="Top" FontFamily="Times New Roman" FontSize="20" Height="24"/>
+                    <Button Content="Roll" VerticalAlignment="Top" Grid.Row="1" Margin="10" IsDefault="True" FontSize="16" FontWeight="Bold" Command="{x:Static local:MainWindow.RollCommand}" CommandTarget="{Binding ElementName=rollResultTextBlock}" CommandParameter="{Binding Text, ElementName=textBox}"/>
+                </Grid>
             </TabItem>
         </TabControl>
         <TextBlock x:Name="rollResultTextBlock" TextWrapping="WrapWithOverflow" Text="Result will be shown here" Grid.Row="1" Margin="10" HorizontalAlignment="Center" VerticalAlignment="Center" FontFamily="Kristen ITC" FontSize="22" FontWeight="Bold"/>
