@@ -33,7 +33,7 @@ namespace DiceRoller.UI
 
         private void ExecutedRollCommand(object sender, ExecutedRoutedEventArgs e)
         {
-            TextBlock target = e.Source as TextBlock;
+            TextBlock target = GetTextBlock(e.Source);
 
             if (target == null) return;
 
@@ -54,9 +54,12 @@ namespace DiceRoller.UI
 
         private void CanExecuteRollCommand(object sender, CanExecuteRoutedEventArgs e)
         {
-            TextBlock target = e.Source as TextBlock;
+            e.CanExecute = GetTextBlock(e.Source) == null ? false : true;
+        }
 
-            e.CanExecute = target == null ? false : true;
+        private TextBlock GetTextBlock(object target)
+        {
+            return target as TextBlock;
         }
     }
 }
